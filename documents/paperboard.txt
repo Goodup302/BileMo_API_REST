@@ -1,0 +1,99 @@
+Contexte:
+    BileMo est une entreprise offrant toute une sélection de téléphones mobiles haut de gamme.
+
+    Vous êtes en charge du développement de la vitrine de téléphones mobiles de l’entreprise BileMo.
+    Le business modèle de BileMo n’est pas de vendre directement ses produits sur le site web,
+    mais de fournir à toutes les plateformes qui le souhaitent l’accès au catalogue via une API.
+    Il s’agit donc de vente exclusivement en B2B (business to business).
+
+    Il va donc falloir que vous exposiez un certain nombre d’API pour que les applications
+    des autres plateformes web puissent effectuer des opérations.
+
+
+
+
+
+
+
+
+Besoin client:
+
+    Présentation des données:
+        Respecter le modèle de Richardson (niveaux 1, 2, 3)
+        Il a demandé à ce que vous serviez les données en JSON.
+        Mettre les réponses en cache
+
+    Routes:
+        Liste des produits BileMo
+        Détails d’un produit BileMo
+        Liste des utilisateurs inscrits liés à un client sur le site web
+        Consulter le détail d’un utilisateur inscrit lié à un client
+        Ajouter un nouvel utilisateur lié à un client
+        Supprimer un utilisateur ajouté par un client
+
+
+    Seuls les clients référencés peuvent accéder aux API. Les clients de l’API doivent être authentifiés via Oauth ou JWT.
+
+    Vous avez le choix de mettre en place un serveur Oauth et d’y faire appel (en utilisant le FOSOAuthServerBundle)
+    ou d’utiliser Facebook, Google ou LinkedIn. Si vous décidez d’utiliser JWT,
+    il vous faudra vérifier la validité du token ; l’usage d’une librairie est autorisée.
+
+
+
+
+
+Etapes de travail:
+    Étape 3 - Créez l’ensemble des issues sur le repository Github (https://github.com/username/nom_du_repo/issues/new).
+    Étape 4 - Faites vos estimations de l’ensemble de vos issues.
+    Étape 5 - Entamez le développement de l’application et proposez des pull requests pour chacune des fonctionnalités / issues tout en veillant à valider la qualité de votre code ainsi que ses performances.
+    Étape 6 - Faites relire votre code à votre mentor (code proposé dans la ou les pull requests), et une fois validée(s) mergez la ou les pull requests dans la branche principale. (Cette relecture servira à valider que vous implémentez les bonnes pratiques et que votre code est cohérent, la validation se fera en continue durant les sessions.)
+    Étape 7 - Effectuez une démonstration de l’ensemble de l’application.
+    Étape 8 - Préparez l’ensemble de vos livrables et soumettez-les sur la plateforme.
+
+
+
+
+
+
+
+Livrables:
+    Un lien vers l’ensemble du projet (fichiers PHP/HTML/JS/CSS…) sur un repository Github
+    Diagrammes UML (modèles de données, classes, séquentiels)
+    Les instructions pour installer le projet (dans un fichier README à la racine du projet)
+    Les issues sur le repository Github
+    Documentation technique de l’API à destination des futurs utilisateurs
+
+
+
+
+
+Compétences évaluées:
+    Analyser et optimiser les performances d’une application
+    Concevoir une architecture efficace et adaptée
+    Suivre la qualité d’un projet
+    Exposer une API REST avec Symfony
+    Lancer une authentification à chaque requête HTTP
+    Produire une documentation technique
+
+
+
+Les ISSUES:
+    Faites vos estimations de l’ensemble de vos issues.
+
+
+    Create Entities
+    Create Fixtures
+    Configure API Platform
+    Serialize and deserialize resources
+    Add cache system
+    Create web documentation of API
+
+
+
+
+
+
+Question:
+    CodeClimate certification
+    Montrer une analyse de qualité ainsi que les correctifs apportés
+    Présenter un graph de performances afin d’expliquer les optimisations possibles.
