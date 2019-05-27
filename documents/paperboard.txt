@@ -10,35 +10,28 @@ Contexte:
     des autres plateformes web puissent effectuer des opérations.
 
 
-
-
-
-
-
-
 Besoin client:
 
     Présentation des données:
         Respecter le modèle de Richardson (niveaux 1, 2, 3)
-        Il a demandé à ce que vous serviez les données en JSON.
+        Retourner les resources en JSON
         Mettre les réponses en cache
 
     Routes:
-        Liste des produits BileMo
-        Détails d’un produit BileMo
-        Liste des utilisateurs inscrits liés à un client sur le site web
-        Consulter le détail d’un utilisateur inscrit lié à un client
-        Ajouter un nouvel utilisateur lié à un client
-        Supprimer un utilisateur ajouté par un client
+        Liste des produits
+        Détails d’un produit
 
+        Liste des utilisateurs liés à un client
+        Consulter le détail d’un utilisateur
+        Ajouter un nouvel utilisateur
+        Supprimer un utilisateur
 
-    Seuls les clients référencés peuvent accéder aux API. Les clients de l’API doivent être authentifiés via Oauth ou JWT.
+    Auth:
+        JWT, vérifier la validité du token avec une librairie.
 
-    Vous avez le choix de mettre en place un serveur Oauth et d’y faire appel (en utilisant le FOSOAuthServerBundle)
-    ou d’utiliser Facebook, Google ou LinkedIn. Si vous décidez d’utiliser JWT,
-    il vous faudra vérifier la validité du token ; l’usage d’une librairie est autorisée.
-
-
+    Perf:
+        CodeClimate certification qualité du code
+        BlackFire perf graph
 
 
 
@@ -52,18 +45,12 @@ Etapes de travail:
 
 
 
-
-
-
-
 Livrables:
     Un lien vers l’ensemble du projet (fichiers PHP/HTML/JS/CSS…) sur un repository Github
     Diagrammes UML (modèles de données, classes, séquentiels)
     Les instructions pour installer le projet (dans un fichier README à la racine du projet)
     Les issues sur le repository Github
     Documentation technique de l’API à destination des futurs utilisateurs
-
-
 
 
 
@@ -77,23 +64,4 @@ Compétences évaluées:
 
 
 
-Les ISSUES:
-    Faites vos estimations de l’ensemble de vos issues.
-
-
-    Create Entities
-    Create Fixtures
-    Configure API Platform
-    Serialize and deserialize resources
-    Add cache system
-    Create web documentation of API
-
-
-
-
-
-
-Question:
-    CodeClimate certification
-    Montrer une analyse de qualité ainsi que les correctifs apportés
-    Présenter un graph de performances afin d’expliquer les optimisations possibles.
+A faire: le system d'auth
