@@ -22,13 +22,14 @@ class DataFixtures extends Fixture
 
         for ($i=0; $i < 5; $i++) {
             $client = new Client();
-            $client->setName("Client $i");
+            $client->setUserName("Client $i");
+            $client->setEmail("test@test.fr");
+            $client->setPassword($this->encoder->encodePassword($client, "admin"));
             $manager->persist($client);
             for ($ii=0; $ii < 5; $ii++) {
                 $user = new User();
                 $user->setUserName("User $ii of client $i");
                 $user->setEmail("test@test.fr");
-                $user->setPassword($this->encoder->encodePassword($user, "admin"));
                 $user->setClient($client);
                 $manager->persist($user);
             }

@@ -1,32 +1,33 @@
 security:
     encoders:
-        App\Entity\User:
+        App\Entity\Client:
             algorithm: argon2i
 
     providers:
         app_user_provider:
             entity:
-                class: App\Entity\User
-                property: email
+                class: App\Entity\Client
+                property: username
 
     firewalls:
         dev:
             pattern: ^/_(profiler|wdt)
             security: false
-        main:
+        api:
+            pattern:   ^/api
             stateless: true
-            anonymous: true
-            provider: app_user_provider
-            json_login:
-                check_path: /authentication_token
-                username_path: email
-                password_path: password
-                success_handler: lexik_jwt_authentication.handler.authentication_success
-                failure_handler: lexik_jwt_authentication.handler.authentication_failure
             guard:
                 authenticators:
                     - lexik_jwt_authentication.jwt_token_authenticator
+        login:
+            pattern:  ^/login
+            stateless: true
+            anonymous: true
+            json_login:
+                check_path:               /login_check
+                success_handler:          lexik_jwt_authentication.handler.authentication_success
+                failure_handler:          lexik_jwt_authentication.handler.authentication_failure
 
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/,       roles: IS_AUTHENTICATED_FULLY }
