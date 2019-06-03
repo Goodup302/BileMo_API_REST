@@ -10,6 +10,8 @@ use Doctrine\Common\Persistence\ObjectManager;
 
 class DataFixtures extends Fixture
 {
+    use InitFixtures;
+
     public function load(ObjectManager $manager)
     {
         for ($i=0; $i < 5; $i++) {
@@ -24,13 +26,13 @@ class DataFixtures extends Fixture
             $manager->persist($client);
             for ($ii=0; $ii < 5; $ii++) {
                 $user = new User();
-                $user->setName("User $ii of client $i");
+                $user->setUserName("User $ii of client $i");
+                $user->setEmail("test@test.fr");
+                $user->setPassword($this->encoder->encodePassword($user, "admin"));
                 $user->setClient($client);
                 $manager->persist($user);
             }
         }
-
-
         $manager->flush();
     }
 }

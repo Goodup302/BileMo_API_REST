@@ -64,4 +64,6 @@ Compétences évaluées:
 
 
 
-A faire: le system d'auth
+A faire:
+    le system d'auth
+    un cours sur les api rest
