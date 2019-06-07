@@ -6,20 +6,7 @@ parameters:
     env(VARNISH_URL): ''
 
 api_platform:
+    title: 'BileMo'
+    description: 'BileMo is a REST API that provides a phone showcase.'
     mapping:
         paths: ['%kernel.project_dir%/src/Entity']
-
-    http_cache:
-        invalidation:
-            enabled: true
-            varnish_urls: ['%env(VARNISH_URL)%']
-        # Adds sensitive default cache headers
-        max_age: 0
-        shared_max_age: 3600
-        vary: ['Content-Type', 'Authorization']
-        public: true
-    swagger:
-        api_keys:
-           apiKey:
-              name: Authorization
-              type: header

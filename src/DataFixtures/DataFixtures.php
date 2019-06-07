@@ -16,7 +16,11 @@ class DataFixtures extends Fixture
     {
         for ($i=0; $i < 5; $i++) {
             $product = new Product();
-            $product->setTitle("Mobile $i");
+            $product->setTitle("Mobile $i")
+                ->setPrice(10.05)
+                ->setAvailable(true)
+                ->setBuilder('Apple')
+            ;
             $manager->persist($product);
         }
 

@@ -25,6 +25,26 @@ class Product
      */
     private $title;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $builder;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $price;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $available;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -38,6 +58,54 @@ class Product
     public function setTitle(string $title): self
     {
         $this->title = $title;
+
+        return $this;
+    }
+
+    public function getBuilder(): ?string
+    {
+        return $this->builder;
+    }
+
+    public function setBuilder(string $builder): self
+    {
+        $this->builder = $builder;
+
+        return $this;
+    }
+
+    public function getPrice(): ?float
+    {
+        return $this->price;
+    }
+
+    public function setPrice(float $price): self
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    public function getAvailable(): ?bool
+    {
+        return $this->available;
+    }
+
+    public function setAvailable(bool $available): self
+    {
+        $this->available = $available;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }
