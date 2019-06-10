@@ -17,7 +17,7 @@ How to Install project
     php bin/console cache:clear -e prod -n --no-debug
     ```
     
-    Create .env.local file adne enter this:
+    Create .env.local file and enter this:  
     APP_ENV=prod
     DATABASE_URL=mysql://root:root@127.0.0.1:3306/bilemo
 
@@ -38,6 +38,21 @@ How to Install project
     ```
     Next, enter passphrase in .env.local file
     (ex: JWT PASSPHRASE:admin)
+
+How to use API
+------
+
+1. Get token
+
+   Request route **/token** with method **POST** and http headers "**Content-Type: application/json**".  
+   Response return token is json format, validity of token is 60 minutes.
+
+2. Request endpoints API
+
+    Add this headers on all request:
+    
+    Authorization: Bearer **TOKEN**  
+    Content-Type: application/json  
 
 Reset Fixtures
 ------

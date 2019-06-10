@@ -10,3 +10,11 @@ api_platform:
     description: 'BileMo is a REST API that provides a phone showcase.'
     mapping:
         paths: ['%kernel.project_dir%/src/Entity']
+    formats:
+        json:
+            mime_types: ['application/json']
+        html:
+            mime_types: ['text/html']
+    error_formats:
+        jsonproblem:
+            mime_types: ['application/problem+json']

@@ -20,11 +20,11 @@ security:
                 authenticators:
                     - lexik_jwt_authentication.jwt_token_authenticator
         login:
-            pattern:  ^/login
+            pattern:  ^/token
             stateless: true
             anonymous: true
             json_login:
-                check_path: /login_check
+                check_path: /token
                 success_handler: lexik_jwt_authentication.handler.authentication_success
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
 

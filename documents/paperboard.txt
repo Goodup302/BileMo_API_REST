@@ -71,6 +71,5 @@ A faire:
     Documenter la doc
     Actualiser les diagrames
     Gestion des erreurs
-    Forcer le retour des donées en json
 
     Voire pour générer une doc public avec API docs
