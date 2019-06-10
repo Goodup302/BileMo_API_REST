@@ -65,5 +65,12 @@ Compétences évaluées:
 
 
 A faire:
-    le system d'auth
-    un cours sur les api rest
+    Ajuster les atributs en fonction de la requete ex: (Faire les groups)
+        /USERS
+        /USERS/ID
+    Documenter la doc
+    Actualiser les diagrames
+    Gestion des erreurs
+    Forcer le retour des donées en json
+
+    Voire pour générer une doc public avec API docs
