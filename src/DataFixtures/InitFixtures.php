@@ -12,8 +12,6 @@ trait InitFixtures
      * @var Generator
      */
     private $faker;
-    private $size = 15;
-    private $defaultEmail = "j.f0471430704@gmail.com";
     /**
      * UserPasswordEncoderInterface
      */

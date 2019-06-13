@@ -14,27 +14,30 @@ class DataFixtures extends Fixture
 
     public function load(ObjectManager $manager)
     {
+        //Phone
         for ($i=0; $i < 100; $i++) {
             $product = new Product();
-            $product->setTitle("Mobile $i")
-                ->setPrice(10.05)
-                ->setAvailable(true)
-                ->setBuilder('Apple')
+            $product->setModel(Phone::model())
+                ->setPrice($this->faker->numberBetween("200", "2000"))
+                ->setAvailable(rand(0, 1))
+                ->setBuilder(Phone::builder())
                 ->setDescription($this->faker->realText(500))
+                ->setColor(Phone::color())
+                ->setMemory(Phone::memory());
             ;
             $manager->persist($product);
         }
 
         for ($i=0; $i < 4; $i++) {
             $client = new Client();
-            $client->setUserName("Client $i");
-            $client->setEmail("test@test.fr");
+            $client->setUserName(Phone::telecom());
+            $client->setEmail($this->faker->email);
             $client->setPassword($this->encoder->encodePassword($client, "admin"));
             $manager->persist($client);
             for ($ii=0; $ii < 30; $ii++) {
                 $user = new User();
-                $user->setUserName("User $ii of client $i");
-                $user->setEmail("test@test.fr");
+                $user->setUserName($this->faker->firstName);
+                $user->setEmail($this->faker->email);
                 $user->setClient($client);
                 $manager->persist($user);
             }

@@ -12,9 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *     collectionOperations={
  *          "get"={"normalization_context"={"groups"={"collection"}}}
  *     },
- *     itemOperations={
- *          "get"={"normalization_context"={"groups"={"get", "details"}}}
- *     },
+ *     itemOperations={"get"},
  *     attributes={"pagination_items_per_page"=25}
  * )
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
@@ -34,45 +32,51 @@ class Product
      * @Assert\NotNull
      * @Groups("collection")
      */
-    private $title;
+    private $model;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("details")
      */
     private $builder;
 
     /**
      * @ORM\Column(type="float")
-     * @Groups("details")
      */
     private $price;
 
     /**
      * @ORM\Column(type="boolean")
-     * @Groups("details")
      */
     private $available;
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * @Groups("details")
      */
     private $description;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $color;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $memory;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getTitle(): ?string
+    public function getModel(): ?string
     {
-        return $this->title;
+        return $this->model;
     }
 
-    public function setTitle(string $title): self
+    public function setModel(string $model): self
     {
-        $this->title = $title;
+        $this->model = $model;
 
         return $this;
     }
@@ -121,6 +125,30 @@ class Product
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getColor(): ?string
+    {
+        return $this->color;
+    }
+
+    public function setColor(string $color): self
+    {
+        $this->color = $color;
+
+        return $this;
+    }
+
+    public function getMemory(): ?int
+    {
+        return $this->memory;
+    }
+
+    public function setMemory(int $memory): self
+    {
+        $this->memory = $memory;
 
         return $this;
     }

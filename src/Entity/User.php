@@ -15,7 +15,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  *     },
  *     itemOperations={"get", "delete"}
  * )
- * @UniqueEntity("username")
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User
@@ -36,6 +35,7 @@ class User
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
      * @Groups({"create"})
      */
     private $username;
