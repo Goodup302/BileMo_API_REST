@@ -10,12 +10,9 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ApiResource(
- *     normalizationContext={"groups"={"get"}},
  *     collectionOperations={
- *          "post"= {
- *              "normalization_context"={"groups"={"create"}}
- *          }
- *      },
+ *          "post"={"normalization_context"={"groups"={"create"}}}
+ *     },
  *     itemOperations={"get", "delete"}
  * )
  * @UniqueEntity("username")
@@ -27,7 +24,6 @@ class User
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Groups({"get"})
      */
     private $id;
 
@@ -40,13 +36,13 @@ class User
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"get", "create"})
+     * @Groups({"create"})
      */
     private $username;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"get", "create"})
+     * @Groups({"create"})
      * @Assert\Email()
      */
     private $email;

@@ -10,18 +10,12 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ApiResource(
  *     collectionOperations={
- *          "get"={
- *             "normalization_context"={"groups"={"collection"}}
- *          }
+ *          "get"={"normalization_context"={"groups"={"collection"}}}
  *     },
  *     itemOperations={
- *          "get"={
- *             "normalization_context"={"groups"={"get", "details"}}
- *          }
+ *          "get"={"normalization_context"={"groups"={"get", "details"}}}
  *     },
- *     attributes={
- *          "pagination_items_per_page"=25
- *     }
+ *     attributes={"pagination_items_per_page"=25}
  * )
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
  */

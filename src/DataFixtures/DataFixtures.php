@@ -31,7 +31,7 @@ class DataFixtures extends Fixture
             $client->setEmail("test@test.fr");
             $client->setPassword($this->encoder->encodePassword($client, "admin"));
             $manager->persist($client);
-            for ($ii=0; $ii < 10; $ii++) {
+            for ($ii=0; $ii < 30; $ii++) {
                 $user = new User();
                 $user->setUserName("User $ii of client $i");
                 $user->setEmail("test@test.fr");

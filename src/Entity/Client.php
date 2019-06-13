@@ -14,9 +14,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  *     normalizationContext={"groups"={"users"}},
  *     collectionOperations={},
  *     itemOperations={
- *          "get"={
- *             "normalization_context"={"groups"={"users"}}
- *          }
+ *          "get"={"normalization_context"={"groups"={"users"}}}
  *      }
  * )
  * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
