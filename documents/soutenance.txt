@@ -1,0 +1,69 @@
+Vous vous adresserez à votre employeur.
+
+
+Étape 1 : Contexte, Analyse, Organisation [10 minutes]
+
+    Contexte du projet:
+        Besoin: de dev les fonctionnaliter demandeées par le nouveau client
+
+        But: Mettre en place un cataloge de mobile de luxe
+
+        Par la suite:
+
+    Schémas UML:
+        - diagrammes d’utilisation
+        - séquence
+        - classe
+        - séquence
+        - modèle de données SQL
+
+    Organisation du projet:
+        - Découpage en tâches (Issue)
+        - Priorisation
+        - Les estimation
+
+
+
+Étape 2 : Démo de l'API [5 minutes]
+
+    Expliquer REST:
+        - Modèle Richardson
+        - Requette Sans état
+        - Metode HTTP
+        - Réponse HTTP (Code, Headers)
+
+    Postman:
+        - Get token JWT
+        - Les routes
+        - Pagination
+
+    Documentation:
+        - http://127.0.0.1:8000/api
+        - http://127.0.0.1:8000/api?ui=re_doc
+
+
+
+Étape 3 : Exécution [5 minutes]
+
+    Versionning Git:
+        - Pull request
+        - Branch
+        - Readme
+
+    Expliquer REST:
+        - Sérialisation
+        - Désérialisation
+        - Groupe
+
+    librairies:
+        - Faker | Pour les fixtures
+        - API Platform | intégratioin REST
+        - Swager | Pour la documentation
+        - Jwt-authentication-bundle | Auth
+
+
+
+    Analyse Codeclimate
+    BlackFire: Présenter un graph de performances afin d’expliquer les optimisations possibles.
+
+

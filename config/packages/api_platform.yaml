@@ -1,0 +1,23 @@
+parameters:
+    # Adds a fallback VARNISH_URL if the env var is not set.
+    # This allows you to run cache:warmup even if your
+    # environment variables are not available yet.
+    # You should not need to change this value.
+    env(VARNISH_URL): ''
+
+api_platform:
+    title: 'BileMo'
+    description: 'BileMo is a REST API that provides a phone showcase.'
+    mapping:
+        paths: ['%kernel.project_dir%/src/Entity']
+    #formats:
+    #    json:
+    #        mime_types: ['application/json']
+    #    html:
+    #        mime_types: ['text/html']
+    #    jsonhal:
+    #        mime_types:
+    #            - application/hal+json
+    #error_formats:
+    #    jsonproblem:
+    #        mime_types: ['application/problem+json']
