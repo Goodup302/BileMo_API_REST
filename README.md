@@ -45,12 +45,12 @@ How to use API
 1. Get token
 
    Request route **/token** with method **POST** and http headers "**Content-Type: application/json**".  
+   Add client data in body : {"username": "","password": ""}  
    Response return token is json format, validity of token is 60 minutes.
 
 2. Request endpoints API
 
-    Add this headers on all request:
-    
+    Add this headers on all request:  
     Authorization: Bearer **TOKEN**  
     Content-Type: application/json  
 

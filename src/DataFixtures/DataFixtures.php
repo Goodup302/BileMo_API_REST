@@ -14,7 +14,7 @@ class DataFixtures extends Fixture
 
     public function load(ObjectManager $manager)
     {
-        //Phone
+        //Phones
         for ($i=0; $i < 100; $i++) {
             $product = new Product();
             $product->setModel(Phone::model())
@@ -28,20 +28,25 @@ class DataFixtures extends Fixture
             $manager->persist($product);
         }
 
+        //Clients
         for ($i=0; $i < 4; $i++) {
             $client = new Client();
-            $client->setUserName(Phone::telecom());
-            $client->setEmail($this->faker->email);
-            $client->setPassword($this->encoder->encodePassword($client, "admin"));
+            $client->setUserName(Phone::telecom())
+                ->setEmail($this->faker->email)
+                ->setPassword($this->encoder->encodePassword($client, "admin"))
+            ;
             $manager->persist($client);
+            //Users
             for ($ii=0; $ii < 30; $ii++) {
                 $user = new User();
-                $user->setUserName($this->faker->firstName);
-                $user->setEmail($this->faker->email);
-                $user->setClient($client);
+                $user->setUserName($this->faker->firstName)
+                    ->setEmail($this->faker->email)
+                    ->setClient($client)
+                ;
                 $manager->persist($user);
             }
         }
+
         $manager->flush();
     }
 }

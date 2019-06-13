@@ -70,6 +70,4 @@ Compétences évaluées:
 
 
 A faire:
-    Faire les groupes
-    Documenter la doc
     Actualiser les diagrames

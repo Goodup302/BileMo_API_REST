@@ -1,43 +1,69 @@
-Déroulement de la soutenance:
-    Il vous sera demandé de présenter le projet en soutenance.
+Vous vous adresserez à votre employeur.
 
-    Il vous est demandé de vous mettre en situation réelle : en effet, il s'agit d'un rendez-vous professionnel. Vous vous adresserez à votre employeur qui a pour principal intérêt d'avoir une API fonctionnelle.
 
-    Voici, sous forme d'étapes, comment devrait se dérouler la soutenance :‌‌
+Étape 1 : Contexte, Analyse, Organisation [10 minutes]
 
-    Étapes	Temps à passer
-    Étape 1 : Présentation du contexte du projet, analyse du besoin & organisation du projet
+    Contexte du projet:
+        Besoin: de dev les fonctionnaliter demandeées par le nouveau client
 
-    Présentation du contexte du projet : il s'agit de rappeler le contexte du projet dans le cadre du parcours que vous suivez.
-    Analyse du besoin : vous choisirez l'une des fonctionnalités développée et il vous faudra présenter les schémas UML correspondant (diagrammes d’utilisation, de classe et de séquence et modèle de données).
-    Organisation du projet : vous expliciterez la méthodologie adoptée, l'organisation de votre travail (découpage en tâches, priorisation, les estimations…).
-    ~ 10 minutes
-    Étape 2 : Démonstration de l'application
+        But: Mettre en place un cataloge de mobile de luxe
 
-    Il s'agit de présenter l'ensemble des fonctionnalités de l'application via Postman.‌
+        Par la suite:
 
-    Il vous faudra également présenter la documentation de l'API.
+    Schémas UML:
+        - diagrammes d’utilisation
+        - séquence
+        - classe
+        - séquence
+        - modèle de données SQL
 
-    ~ 5 minutes
-    Étape 3 : Exécution
+    Organisation du projet:
+        - Découpage en tâches (Issue)
+        - Priorisation
+        - Les estimation
 
-    Vous présenterez le projet du point de vue technique cette fois-ci. Il s'agit de :
 
-    montrer comment vous avez versionné votre projet ;
-    présenter l'architecture technique que vous avez mis en place ;
-    lister les librairies que vous avez choisis et comment vous les avez intégré ;
-    prendre une pull request sur Github correspondant à une tâche et vous
-    détailler comment vous avez mené à bien cette tâche ;
-    comment vous avez procédé pour garantir la mise en place des bonnes pratiques en vigueur ;
-    montrer une analyse de qualité ainsi que les correctifs apportés
-    présenter un graph de performances afin d’expliquer les optimisations possibles.
-    ~ 5 minutes
-    Étape 4 : Questions / Réponses
 
-    Une session de questions/réponses autour de ce que vous aurez exposés sera à mener.‌‌
+Étape 2 : Démo de l'API [5 minutes]
 
-    ~ 5 minutes
-    Total
+    Expliquer REST:
+        - Modèle Richardson
+        - Requette Sans état
+        - Metode HTTP
+        - Réponse HTTP (Code, Headers)
 
-    30 minutes maximum
+    Postman:
+        - Get token JWT
+        - Les routes
+        - Pagination
+
+    Documentation:
+        - http://127.0.0.1:8000/api
+        - http://127.0.0.1:8000/api?ui=re_doc
+
+
+
+Étape 3 : Exécution [5 minutes]
+
+    Versionning Git:
+        - Pull request
+        - Branch
+        - Readme
+
+    Expliquer REST:
+        - Sérialisation
+        - Désérialisation
+        - Groupe
+
+    librairies:
+        - Faker | Pour les fixtures
+        - API Platform | intégratioin REST
+        - Swager | Pour la documentation
+        - Jwt-authentication-bundle | Auth
+
+
+
+    Analyse Codeclimate
+    BlackFire: Présenter un graph de performances afin d’expliquer les optimisations possibles.
+
 
