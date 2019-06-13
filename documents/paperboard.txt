@@ -16,15 +16,20 @@ Besoin client:
         Respecter le modèle de Richardson (niveaux 1, 2, 3)
         Retourner les resources en JSON
         Mettre les réponses en cache
+        Pagination
 
     Routes:
-        Liste des produits
-        Détails d’un produit
+        CLIENTS
+        -Liste des utilisateurs liés à un client [GET ALL]
 
-        Liste des utilisateurs liés à un client
-        Consulter le détail d’un utilisateur
-        Ajouter un nouvel utilisateur
-        Supprimer un utilisateur
+        USERS
+        -Consulter le détail d’un utilisateur [GET]
+        -Ajouter un nouvel utilisateur lié a un client [POST]
+        -Supprimer un utilisateur [DELETE]
+
+        PRODUCT
+        -Liste des produits [GET ALL]
+        -Détails d’un produit [GET]
 
     Auth:
         JWT, vérifier la validité du token avec une librairie.
@@ -65,11 +70,6 @@ Compétences évaluées:
 
 
 A faire:
-    Ajuster les atributs en fonction de la requete ex: (Faire les groups)
-        /USERS
-        /USERS/ID
+    Faire les groupes
     Documenter la doc
     Actualiser les diagrames
-    Gestion des erreurs
-
-    Voire pour générer une doc public avec API docs

@@ -4,10 +4,25 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     collectionOperations={
+ *          "get"={
+ *             "normalization_context"={"groups"={"collection"}}
+ *          }
+ *     },
+ *     itemOperations={
+ *          "get"={
+ *             "normalization_context"={"groups"={"get", "details"}}
+ *          }
+ *     },
+ *     attributes={
+ *          "pagination_items_per_page"=25
+ *     }
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
  */
 class Product
@@ -16,32 +31,38 @@ class Product
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups("collection")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotNull
+     * @Groups("collection")
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups("details")
      */
     private $builder;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups("details")
      */
     private $price;
 
     /**
      * @ORM\Column(type="boolean")
+     * @Groups("details")
      */
     private $available;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups("details")
      */
     private $description;
 
