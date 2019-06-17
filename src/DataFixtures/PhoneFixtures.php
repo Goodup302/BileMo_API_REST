@@ -4,7 +4,7 @@ namespace App\DataFixtures;
 
 use Faker\Provider\Base;
 
-class Phone extends Base
+class PhoneFixtures extends Base
 {
     const TELECOM = [
         'Free',

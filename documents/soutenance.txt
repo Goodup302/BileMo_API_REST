@@ -58,7 +58,7 @@ Vous vous adresserez à votre employeur.
     librairies:
         - Faker | Pour les fixtures
         - API Platform | intégratioin REST
-        - Swager | Pour la documentation
+        - Swagger | Pour la documentation
         - Jwt-authentication-bundle | Auth
 
 

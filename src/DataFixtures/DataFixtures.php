@@ -17,13 +17,13 @@ class DataFixtures extends Fixture
         //Phones
         for ($i=0; $i < 100; $i++) {
             $product = new Product();
-            $product->setModel(Phone::model())
+            $product->setModel(PhoneFixtures::model())
                 ->setPrice($this->faker->numberBetween("200", "2000"))
                 ->setAvailable(rand(0, 1))
-                ->setBuilder(Phone::builder())
+                ->setBuilder(PhoneFixtures::builder())
                 ->setDescription($this->faker->realText(500))
-                ->setColor(Phone::color())
-                ->setMemory(Phone::memory());
+                ->setColor(PhoneFixtures::color())
+                ->setMemory(PhoneFixtures::memory());
             ;
             $manager->persist($product);
         }
@@ -31,7 +31,7 @@ class DataFixtures extends Fixture
         //Clients
         for ($i=0; $i < 4; $i++) {
             $client = new Client();
-            $client->setUserName(Phone::telecom())
+            $client->setUserName(PhoneFixtures::telecom())
                 ->setEmail($this->faker->email)
                 ->setPassword($this->encoder->encodePassword($client, "admin"))
             ;

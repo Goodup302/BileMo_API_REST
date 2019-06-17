@@ -18,8 +18,10 @@ How to Install project
     ```
     
     Create .env.local file and enter this:  
-    APP_ENV=prod
+    ```text
+    APP_ENV=prod  
     DATABASE_URL=mysql://root:root@127.0.0.1:3306/bilemo
+    ```
 
 2. Generate BDD
 
@@ -30,6 +32,8 @@ How to Install project
     
 3. Generate the SSH keys for JWT auth
 
+    Documentation: https://github.com/lexik/LexikJWTAuthenticationBundle
+    
     Go to root of your project and start these commands
     ```shell
     mkdir -p config/jwt
@@ -37,7 +41,7 @@ How to Install project
     openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem
     ```
     Next, enter passphrase in .env.local file
-    (ex: JWT PASSPHRASE:admin)
+    (ex: JWT_PASSPHRASE:admin)
 
 How to use API
 ------

@@ -13,7 +13,7 @@ Contexte:
 Besoin client:
 
     Présentation des données:
-        Respecter le modèle de Richardson (niveaux 1, 2, 3)
+        Respecter le modèle de Richardson (niveaux 0, 1, 2, 3)
         Retourner les resources en JSON
         Mettre les réponses en cache
         Pagination
@@ -70,4 +70,7 @@ Compétences évaluées:
 
 
 A faire:
-    Actualiser les diagrames
+    - Sur la route /client récupéré uniquement les user du client connecter
+      https://api-platform.com/docs/v2.1/core/extensions/#extensions
+    - Fix error with builder and model name
+    - BlackFire perf graph
