@@ -34,7 +34,6 @@ final class UserPersister implements DataPersisterInterface
             $this->client = $this->tokenStorage->getToken()->getUser();
             return true;
         }
-        return false;
     }
 
     public function persist($user)

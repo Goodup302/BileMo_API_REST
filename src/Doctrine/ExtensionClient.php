@@ -27,7 +27,7 @@ class ExtensionClient implements QueryCollectionExtensionInterface, QueryItemExt
      */
     public function applyToCollection(QueryBuilder $queryBuilder, QueryNameGeneratorInterface $queryNameGenerator, string $resourceClass, string $operationName = null)
     {
-        $this->addWhere($queryBuilder, $resourceClass);
+        if ($resourceClass == User::class || $resourceClass == Client::class) $this->addWhere($queryBuilder, $resourceClass);
     }
 
     /**
@@ -35,7 +35,7 @@ class ExtensionClient implements QueryCollectionExtensionInterface, QueryItemExt
      */
     public function applyToItem(QueryBuilder $queryBuilder, QueryNameGeneratorInterface $queryNameGenerator, string $resourceClass, array $identifiers, string $operationName = null, array $context = [])
     {
-        $this->addWhere($queryBuilder, $resourceClass);
+        if ($resourceClass == User::class || $resourceClass == Client::class) $this->addWhere($queryBuilder, $resourceClass);
     }
 
 

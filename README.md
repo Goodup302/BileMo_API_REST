@@ -50,7 +50,7 @@ How to use API
 
    Request route **/token** with method **POST** and http headers "**Content-Type: application/json**".  
    Add client data in body : {"username": "","password": ""}  
-   Response return token is json format, validity of token is 60 minutes.
+   Response return token is json format, validity of token is one day.
 
 2. Request endpoints API
 
