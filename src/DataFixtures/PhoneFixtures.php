@@ -98,6 +98,6 @@ class PhoneFixtures extends Base
 
     public static function telecom(): string
     {
-        return self::randomElement(self::TELECOM);
+        return self::randomElement(self::TELECOM).'-'.uniqid();
     }
 }

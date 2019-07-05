@@ -24,18 +24,16 @@ class User
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private $id;
+    public $id;
 
     /**
      * @var Client
      * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="users")
-     * @Groups({"create"})
      */
     private $client;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank()
      * @Groups({"create"})
      */
     private $username;

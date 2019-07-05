@@ -8,11 +8,14 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ApiResource(
  *     normalizationContext={"groups"={"users"}},
- *     collectionOperations={},
+ *     collectionOperations={
+ *          "get"={"normalization_context"={"groups"={"users"}}}
+ *     },
  *     itemOperations={
  *          "get"={"normalization_context"={"groups"={"users"}}}
  *      }
@@ -21,6 +24,8 @@ use Symfony\Component\Serializer\Annotation\Groups;
  */
 class Client implements UserInterface
 {
+    const ROLE_USER = "ROLE_USER";
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -38,16 +43,20 @@ class Client implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotNull()
      */
     private $username;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotNull()
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email()
+     * @Assert\NotNull()
      */
     private $email;
 
@@ -136,7 +145,7 @@ class Client implements UserInterface
      */
     public function getRoles(): array
     {
-        return ["ROLE_USER"];
+        return [self::ROLE_USER];
     }
     /**
      * @see UserInterface

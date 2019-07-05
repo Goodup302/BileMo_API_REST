@@ -70,6 +70,4 @@ Compétences évaluées:
 
 
 A faire:
-    - Sur la route /client récupéré uniquement les user du client connecter
-      https://api-platform.com/docs/v2.1/core/extensions/#extensions
     - BlackFire perf graph

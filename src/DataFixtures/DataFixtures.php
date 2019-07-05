@@ -36,7 +36,7 @@ class DataFixtures extends Fixture
             ;
             $manager->persist($client);
             //Users
-            for ($ii=0; $ii < 30; $ii++) {
+            for ($ii=0; $ii < 10; $ii++) {
                 $user = new User();
                 $user->setUserName($this->faker->firstName)
                     ->setEmail($this->faker->email)

@@ -29,7 +29,7 @@ class Product
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotNull
+     * @Assert\NotNull()
      * @Groups("collection")
      */
     private $model;
@@ -41,6 +41,7 @@ class Product
 
     /**
      * @ORM\Column(type="boolean")
+     * @Assert\NotBlank()
      */
     private $available;
 
