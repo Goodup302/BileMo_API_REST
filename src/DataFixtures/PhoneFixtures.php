@@ -25,50 +25,50 @@ class PhoneFixtures extends Base
 
     const MODEL = [
         //Samsung
-        'Galaxy S5',
-        'Galaxy S6',
-        'Galaxy S7',
-        'Galaxy S8',
-        'Galaxy Note 1',
-        'Galaxy Note 2',
-        'Galaxy Note 3',
+        'Samsung Galaxy S5',
+        'Samsung Galaxy S6',
+        'Samsung Galaxy S7',
+        'Samsung Galaxy S8',
+        'Samsung Galaxy Note 1',
+        'Samsung Galaxy Note 2',
+        'Samsung Galaxy Note 3',
         //Apple
-        "iPhone",
-        "iPhone 3G",
-        "iPhone 3GS",
-        "iPhone 4",
-        "iPhone 4S",
-        "iPhone 5",
-        "iPhone 5c",
-        "iPhone 5s",
-        "iPhone 6",
-        "iPhone 6 Plus",
-        "iPhone 6s",
-        "iPhone 6s Plus",
-        "iPhone SE",
-        "iPhone 7",
-        "iPhone 7 Plus",
-        "iPhone 8",
-        "iPhone 8 Plus",
-        "iPhone X",
-        "iPhone XS",
-        "iPhone XS Max",
-        "iPhone XR",
+        "Apple iPhone",
+        "Apple iPhone 3G",
+        "Apple iPhone 3GS",
+        "Apple iPhone 4",
+        "Apple iPhone 4S",
+        "Apple iPhone 5",
+        "Apple iPhone 5c",
+        "Apple iPhone 5s",
+        "Apple iPhone 6",
+        "Apple iPhone 6 Plus",
+        "Apple iPhone 6s",
+        "Apple iPhone 6s Plus",
+        "Apple iPhone SE",
+        "Apple iPhone 7",
+        "Apple iPhone 7 Plus",
+        "Apple iPhone 8",
+        "Apple iPhone 8 Plus",
+        "Apple iPhone X",
+        "Apple iPhone XS",
+        "Apple iPhone XS Max",
+        "Apple iPhone XR",
         //Huawei
-        'P8',
-        'P8 lite',
-        'P9',
-        'P10',
-        'P20',
-        'P20 mate',
+        'Huawei P8',
+        'Huawei P8 lite',
+        'Huawei P9',
+        'Huawei P10',
+        'Huawei P20',
+        'Huawei P20 mate',
         //Xperia
-        'M4',
-        'M5',
-        'MX',
+        'Xperia M4',
+        'Xperia M5',
+        'Xperia MX',
         //Nokia
-        'Lumia 650',
-        'Lumia 750',
-        'Lumia 850',
+        'Nokia Lumia 650',
+        'Nokia Lumia 750',
+        'Nokia Lumia 850',
     ];
 
     const COLOR = [
@@ -80,11 +80,6 @@ class PhoneFixtures extends Base
         'or',
         'argent',
     ];
-
-    public static function builder()
-    {
-        return self::randomElement(self::BUILDER);
-    }
 
     public static function model()
     {

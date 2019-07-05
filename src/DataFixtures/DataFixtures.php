@@ -20,7 +20,6 @@ class DataFixtures extends Fixture
             $product->setModel(PhoneFixtures::model())
                 ->setPrice($this->faker->numberBetween("200", "2000"))
                 ->setAvailable(rand(0, 1))
-                ->setBuilder(PhoneFixtures::builder())
                 ->setDescription($this->faker->realText(500))
                 ->setColor(PhoneFixtures::color())
                 ->setMemory(PhoneFixtures::memory());

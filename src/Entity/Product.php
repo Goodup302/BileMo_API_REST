@@ -35,11 +35,6 @@ class Product
     private $model;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $builder;
-
-    /**
      * @ORM\Column(type="float")
      */
     private $price;
@@ -77,18 +72,6 @@ class Product
     public function setModel(string $model): self
     {
         $this->model = $model;
-
-        return $this;
-    }
-
-    public function getBuilder(): ?string
-    {
-        return $this->builder;
-    }
-
-    public function setBuilder(string $builder): self
-    {
-        $this->builder = $builder;
 
         return $this;
     }
