@@ -66,8 +66,3 @@ Compétences évaluées:
     Exposer une API REST avec Symfony
     Lancer une authentification à chaque requête HTTP
     Produire une documentation technique
-
-
-
-A faire:
-    - BlackFire perf graph

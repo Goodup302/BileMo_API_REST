@@ -8,7 +8,7 @@ Vous vous adresserez à votre employeur.
 
         But: Mettre en place un cataloge de mobile de luxe
 
-        Par la suite:
+        Par la suite: Ajouter des fonctionaliter en fonction des clients
 
     Schémas UML:
         - diagrammes d’utilisation
