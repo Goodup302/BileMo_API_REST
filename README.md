@@ -21,6 +21,7 @@ How to Install project
     ```text
     APP_ENV=prod  
     DATABASE_URL=mysql://root:root@127.0.0.1:3306/bilemo
+    JWT_PASSPHRASE=
     ```
 
 2. Generate BDD
@@ -41,7 +42,7 @@ How to Install project
     openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem
     ```
     Next, enter passphrase in .env.local file
-    (ex: JWT_PASSPHRASE:admin)
+    (ex: JWT_PASSPHRASE=admin)
 
 How to use API
 ------

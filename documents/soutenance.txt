@@ -15,7 +15,7 @@ Vous vous adresserez à votre employeur.
         - séquence
         - classe
         - séquence
-        - modèle de données SQL
+        - modèle de données SQL (PHPStorm)
 
     Organisation du projet:
         - Découpage en tâches (Issue)
@@ -25,12 +25,6 @@ Vous vous adresserez à votre employeur.
 
 
 Étape 2 : Démo de l'API [5 minutes]
-
-    Expliquer REST:
-        - Modèle Richardson
-        - Requette Sans état
-        - Metode HTTP
-        - Réponse HTTP (Code, Headers)
 
     Postman:
         - Get token JWT
@@ -55,15 +49,25 @@ Vous vous adresserez à votre employeur.
         - Désérialisation
         - Groupe
 
+        - Ressourses
+        - Serialization
+        - Modèle Richardson
+        - Requette Sans état
+        - Méthode HTTP
+        - Réponse HTTP (Code, Headers)
+        - Cache
+
     librairies:
         - Faker | Pour les fixtures
         - API Platform | intégratioin REST
         - Swagger | Pour la documentation
         - Jwt-authentication-bundle | Auth
 
+    Analyse Codeclimate:
 
-
-    Analyse Codeclimate
-    BlackFire: Présenter un graph de performances afin d’expliquer les optimisations possibles.
+    Benchmark BlackFire:
+        - Présenter les bench
+        - les comparaison
+        - les optomisation
 
 
