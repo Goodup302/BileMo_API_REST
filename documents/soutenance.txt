@@ -69,5 +69,3 @@ Vous vous adresserez à votre employeur.
         - Présenter les bench
         - les comparaison
         - les optomisation
-
-
