@@ -15,7 +15,7 @@ class DataFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         //Phones
-        for ($i=0; $i < 100; $i++) {
+        for ($i=0; $i < $this->phoneNumber; $i++) {
             $product = new Product();
             $product->setModel(PhoneFixtures::model())
                 ->setPrice($this->faker->numberBetween("200", "2000"))
